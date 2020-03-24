@@ -5,12 +5,12 @@ class NavBar extends Component {
     render() {
         return (
             <Navbar bg="dark" expand="md" variant="dark">
-                <Navbar.Brand href="#home">Dynamic Store</Navbar.Brand>
+                <Navbar.Brand href="#home">Web Apps Demo</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
-                        <Nav.Link href="#home">Configure</Nav.Link>
-                        <Nav.Link href="#link">Demo</Nav.Link>
+                        <Nav.Link href="#home">Ecommerce</Nav.Link>
+                        <Nav.Link href="#link">POS</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
