@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
 class Ecommerce extends Component {
-    render() {
-        return (
-            <div>
+	render() {
+		return (
+			<div>
                 ecommerce
-            </div>
-        )
-    }
+			</div>
+		);
+	}
 }
 
 export default Ecommerce;

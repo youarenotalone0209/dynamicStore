@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
 class POS extends Component {
-    render() {
-        return (
-            <div>
+	render() {
+		return (
+			<div>
                 POS
-            </div>
-        )
-    }
+			</div>
+		);
+	}
 }
 
 export default POS;

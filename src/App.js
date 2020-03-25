@@ -8,18 +8,18 @@ import POS from './components/pos';
 
 
 class App extends Component {
-    render() {
-        return (
-            <BrowserRouter>
-                <Navbar />
-                <Switch>
-                    <Route path="/" component={Home} exact />
-                    <Route path="/ecommerce" component={Ecommerce} exact />
-                    <Route path="/pos" component={POS} exact />
-                </Switch>
-            </BrowserRouter>
-        )
-    }
+	render() {
+		return (
+			<BrowserRouter>
+				<Navbar />
+				<Switch>
+					<Route path="/" component={Home} exact />
+					<Route path="/ecommerce" component={Ecommerce} exact />
+					<Route path="/pos" component={POS} exact />
+				</Switch>
+			</BrowserRouter>
+		);
+	}
 }
 
 export default App;
