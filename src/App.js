@@ -1,23 +1,22 @@
 import React, { Component } from 'react';
 import Navbar from './components/navigation';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { Router, Switch, Route } from 'react-router-dom';
 
-import Home from './components/home';
-import Ecommerce from './components/ecommerce';
-import POS from './components/pos';
+import history from './services/history';
 
+import Tours from './components/tours';
+import PackageDetails from './components/package-details';
 
 class App extends Component {
 	render() {
 		return (
-			<BrowserRouter>
+			<Router history={history}>
 				<Navbar />
 				<Switch>
-					<Route path="/" component={Home} exact />
-					<Route path="/ecommerce" component={Ecommerce} exact />
-					<Route path="/pos" component={POS} exact />
+					<Route path="/" component={Tours} exact />
+					<Route path="/packageDetails/:id" component={PackageDetails} exact />
 				</Switch>
-			</BrowserRouter>
+			</Router>
 		);
 	}
 }
