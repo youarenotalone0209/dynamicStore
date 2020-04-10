@@ -6,6 +6,7 @@ import history from './services/history';
 
 import Tours from './components/tours';
 import PackageDetails from './components/package-details';
+import NoMatch from './components/no-match';
 
 class App extends Component {
 	render() {
@@ -15,6 +16,7 @@ class App extends Component {
 				<Switch>
 					<Route path="/" component={Tours} exact />
 					<Route path="/packageDetails/:id" component={PackageDetails} exact />
+					<Route component={NoMatch} exact />
 				</Switch>
 			</Router>
 		);

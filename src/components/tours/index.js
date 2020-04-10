@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PackageTile from '../shared/package-tile';
 
-import packageData from '../../data/ecommerce';
+import packageData from '../../data/tours';
 
 class Tours extends Component {
 	render() {

@@ -14,7 +14,6 @@ class PackageTile extends Component {
 	}
 
 	routeToPackageDetails() {
-		console.log('sup');
 		history.push(`/packageDetails/${this.package.id}`);
 	}
 
