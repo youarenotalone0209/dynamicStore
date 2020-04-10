@@ -1,0 +1,41 @@
+.package-tile {
+    display: inline-block;
+    margin: 20px;
+    text-align: left;
+    overflow: hidden;
+    height: 180px;
+    width: 300px;
+    position: relative;
+    border-radius: 3px;
+}
+
+.package-tile-desc {
+    color: black;
+    background-color: rgba(216, 216, 216, 0.747);
+    padding-left: 10px;
+    bottom: 0;
+    position: absolute;
+    width: inherit;
+}
+
+.desc-price {
+    display: block;
+    margin: 0;
+    float: right;
+    padding-right: 10px;
+}
+
+.desc-text {
+    display: inline-block;
+    margin: 0;
+}
+
+h4 {
+    padding-left: 10px;
+    color: white;
+}
+
+.package-tile:hover {
+    transform: scaleY(1.05) scaleX(1.05);
+    cursor: pointer;
+}
