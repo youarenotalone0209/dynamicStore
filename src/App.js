@@ -4,20 +4,22 @@ import { Router, Switch, Route } from 'react-router-dom';
 
 import history from './services/history';
 
-import Tours from './components/tours';
-import PackageDetails from './components/package-details';
-import NoMatch from './components/no-match';
+import PackageList from './components/pages/package-list';
+import PackageDetails from './components/pages/package-details';
+import NoMatch from './components/pages/no-match';
 
 class App extends Component {
 	render() {
 		return (
 			<Router history={history}>
 				<Navbar />
-				<Switch>
-					<Route path="/" component={Tours} exact />
-					<Route path="/packageDetails/:id" component={PackageDetails} exact />
-					<Route component={NoMatch} exact />
-				</Switch>
+				<div className="app">
+					<Switch>
+						<Route path="/" component={PackageList} exact />
+						<Route path="/packageDetails/:id" component={PackageDetails} exact />
+						<Route component={NoMatch} exact />
+					</Switch>
+				</div>
 			</Router>
 		);
 	}
