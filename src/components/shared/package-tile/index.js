@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import history from '../../services/history';
+import history from '../../../services/history';
 
 class PackageTile extends Component {
 	constructor(props) {
@@ -20,7 +20,7 @@ class PackageTile extends Component {
 	render() {
 		return (
 			<div className="package-tile" style={this.styles} onClick={() => this.routeToPackageDetails()}>
-				<h4>{this.package.header}</h4>
+				<h4 className="package-header">{this.package.header}</h4>
 				<div className="package-tile-desc">
 					<p className="desc-text">{this.package.subHeader}</p>
 					<p className="desc-price">{'$' + this.package.price}</p>

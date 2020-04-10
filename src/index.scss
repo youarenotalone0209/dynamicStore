@@ -1,9 +1,13 @@
-@import './components/tours/tours.scss';
-@import './components/package-details/package-details.scss';
+@import './components/pages/package-details/package-details.scss';
 
-@import './components/shared/package-tile.scss';
+@import './components/shared/package-tile/package-tile.scss';
 
 body {
     text-align: center;
     font-family: 'Quicksand', sans-serif;
+}
+
+.app {
+    max-width: 1920px;
+    margin: auto;
 }
