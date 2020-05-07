@@ -1,14 +1,24 @@
-.package-details {
-    margin: 15px;
-}
-
 .package-image {
-    margin: 0 20px;
-    width: 90%;
-    max-width: 480px;
+    margin: 0 20px 20px 20px;
+    max-width: 640px;
+    margin: auto;
 }
 
-.package-options {
-    text-align: left;;
+.image {
+    width: 90%;
+}
+
+.package-image, .package-options, .package-decs {
     margin: 20px;
+    display: inline-block;
+}
+
+.package-decs {
+    max-width: 1920px;
+}
+
+@media only screen and (min-width: 1024px) {
+    .package-image {
+        float: left;
+    }
 }

@@ -1,0 +1,18 @@
+.item-summary {
+    margin: 10px;
+}
+
+.item-summary-image, .item-summary-desc {
+    display: inline-block;
+    vertical-align: top;
+    margin: 10px;
+}
+
+.item-summary-image {
+    max-width: 300px;
+}
+
+.item-summary-image:hover {
+    transform: scaleY(1.05) scaleX(1.05);
+    cursor: pointer;
+}

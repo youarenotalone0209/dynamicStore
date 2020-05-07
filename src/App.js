@@ -6,6 +6,7 @@ import history from './services/history';
 
 import PackageList from './components/pages/package-list';
 import PackageDetails from './components/pages/package-details';
+import CartView from './components/pages/cart/';
 import NoMatch from './components/pages/no-match';
 
 class App extends Component {
@@ -16,6 +17,7 @@ class App extends Component {
 				<div className="app">
 					<Switch>
 						<Route path="/" component={PackageList} exact />
+						<Route path="/cartView" component={CartView} exact />
 						<Route path="/packageDetails/:id" component={PackageDetails} exact />
 						<Route component={NoMatch} exact />
 					</Switch>

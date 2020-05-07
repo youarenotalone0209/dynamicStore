@@ -1,0 +1,16 @@
+.cart-summary {
+    margin: 10px;
+}
+
+.total {
+    float: right;
+}
+
+
+
+
+@media only screen and (min-width: 768px) {
+    .cart-summary {
+        text-align: left !important;
+    }
+}
