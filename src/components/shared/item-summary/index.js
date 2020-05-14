@@ -9,7 +9,6 @@ class ItemSummary extends Component {
 		super(props);
 		this.currentItem = buildCartItem(this.props.item.packageId, this.props.item.addOns, this.props.item.quantity);
 		this.props.addPrice(this.currentItem.price);
-		console.log(this.currentItem);
 	}
 
 	renderAddOn() {
@@ -29,7 +28,7 @@ class ItemSummary extends Component {
 				<div className="item-summary-desc">
 					<p>{this.currentItem.header}</p>
 					<p>{this.currentItem.subHeader}</p>
-					<p>${this.currentItem.price} (Shipping included)</p>
+					<p>${this.currentItem.price} (Shipping & AddOns Included)</p>
 					<p>Quantity: {this.currentItem.quantity}</p>
 					{this.renderAddOn()}
 				</div>				

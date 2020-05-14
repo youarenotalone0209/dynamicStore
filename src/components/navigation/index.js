@@ -1,23 +1,26 @@
-import React from 'react';
-import { Navbar } from 'react-bootstrap';
+import React, { Component } from 'react';
+import { Navbar, Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-const NavBar = function() {
-	return (
-		<Navbar bg="dark" expand="md" variant="dark">
-			<Navbar.Brand as={Link} to="/">Travel Planner</Navbar.Brand>
-			{/* <Navbar.Toggle aria-controls="basic-navbar-nav" />
-			<Navbar.Collapse id="basic-navbar-nav">
-				<Nav className="mr-auto">
-					<Nav.Link as={Link} to="/ecommerce">Ecommerce</Nav.Link>
-					<Nav.Link as={Link} to="/ecommerce"></Nav.Link>
-					<NavDropdown title="Ecommerce" id="basic-nav-dropdown">
-						<NavDropdown.Item as={Link} to="/ecommerce">Live Demo</NavDropdown.Item>
-					</NavDropdown> 
-				</Nav>
-			</Navbar.Collapse> */}
-		</Navbar>
-	);
-};
+import { connect } from 'react-redux';
 
-export default NavBar;
+class NavBar extends Component {
+	render() {
+		let cartItemTotal = this.props.items.length;
+		let disableCart = cartItemTotal === 0;
+		return (
+			<Navbar bg="dark" expand="md" variant="dark">
+				<Navbar.Brand as={Link} to="/">Travel Planner</Navbar.Brand>
+				<Nav.Link disabled={disableCart} as={Link} className="ml-auto" to="/cartView">Cart: {cartItemTotal}</Nav.Link>
+			</Navbar>
+		);
+	}
+}
+
+function mapStateToProps(state) {
+	return {
+		items: state.items
+	};
+}
+  
+export default connect(mapStateToProps, null)(NavBar);

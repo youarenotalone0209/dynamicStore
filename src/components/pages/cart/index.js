@@ -17,19 +17,23 @@ class CartView extends Component {
 	}
 
 	renderItem() {
-		return this.props.items.map((item) => {
-			return (<ItemSummary key={item.packageId} item={item}></ItemSummary>);
+		return this.props.items.map((item, index) => {
+			return (<ItemSummary key={index} item={item}></ItemSummary>);
 		});
 	}
 
 	checkout() {
-		alert('The checkout page is being worked on - please comeback later');
+		history.push('/demographic');
 	}
 
 	render() {
 		return (
 			<div className="cart-summary">
+				<div className="title">
+					<h3>Your Cart</h3>
+				</div>
 				{this.renderItem()}
+				<p>Your cart will be saved for only 5 minutes - if you refresh the application after 5 minutes, all cart items will be removed</p>
 				<div className="total">
 					<p>Total: ${this.props.price}</p>
 					<Button onClick={() => this.checkout()}>Checkout</Button>
