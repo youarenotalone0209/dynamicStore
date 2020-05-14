@@ -19,7 +19,6 @@ class PackageList extends Component {
 			localStorage.setItem('timeStamp', currentTimeStamp);
 			this.props.initialize();
 		}
-
 	}
 
 	render() {
