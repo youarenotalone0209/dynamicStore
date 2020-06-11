@@ -43,7 +43,7 @@ class Confirmation extends Component {
 					<h5>Payment:</h5>
 					<p>{this.maskedCart}</p>
 
-					<h5>Here is a smiling dogs pictures:</h5>
+					<h5>Here is a smiling dogs picture:</h5>
 					<img className="confirmation-picture" src='../../../../assets/smiling-dogs.jpg' alt='Smiling Dogs' />
 
 				</div>
